@@ -3,17 +3,25 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00FDF2E5744260FB031A5FFC /* Pods_MobileDataRecorder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8B4EA0DCA3C987E2431E4C2 /* Pods_MobileDataRecorder.framework */; };
+		0A475DB924EC706900FED812 /* MobileDataUsageListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A475DB824EC706800FED812 /* MobileDataUsageListTableViewController.swift */; };
+		0A475DC124EC731600FED812 /* MobileDataHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A475DBD24EC731600FED812 /* MobileDataHeaderView.xib */; };
+		0A475DC224EC731600FED812 /* MobileDataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A475DBE24EC731600FED812 /* MobileDataTableViewCell.xib */; };
+		0A475DC324EC731600FED812 /* MobileDataHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A475DBF24EC731600FED812 /* MobileDataHeaderView.swift */; };
+		0A475DC424EC731600FED812 /* MobileDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A475DC024EC731600FED812 /* MobileDataTableViewCell.swift */; };
+		0A475DC724EC73FB00FED812 /* MobileDataListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A475DC624EC73FB00FED812 /* MobileDataListViewModel.swift */; };
 		0A7DF34D24EC472D00680E45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7DF34C24EC472D00680E45 /* AppDelegate.swift */; };
-		0A7DF35124EC472D00680E45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7DF35024EC472D00680E45 /* ViewController.swift */; };
 		0A7DF35424EC472D00680E45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A7DF35224EC472D00680E45 /* Main.storyboard */; };
 		0A7DF35624EC473100680E45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A7DF35524EC473100680E45 /* Assets.xcassets */; };
 		0A7DF35924EC473100680E45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A7DF35724EC473100680E45 /* LaunchScreen.storyboard */; };
 		0A7DF36424EC473100680E45 /* MobileDataRecorderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7DF36324EC473100680E45 /* MobileDataRecorderTests.swift */; };
 		0A7DF36F24EC473100680E45 /* MobileDataRecorderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7DF36E24EC473100680E45 /* MobileDataRecorderUITests.swift */; };
+		691BC3222E086BE35833086C /* Pods_MobileDataRecorderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13CBA48F7981829BC69A6711 /* Pods_MobileDataRecorderTests.framework */; };
+		9672D509ADAD0D9E4F646238 /* Pods_MobileDataRecorder_MobileDataRecorderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD2CEFB5C4B8C20695F3C0A7 /* Pods_MobileDataRecorder_MobileDataRecorderUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +42,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0272BED64D9F3BE4A94DC53E /* Pods-MobileDataRecorder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileDataRecorder.debug.xcconfig"; path = "Target Support Files/Pods-MobileDataRecorder/Pods-MobileDataRecorder.debug.xcconfig"; sourceTree = "<group>"; };
+		0A475DB824EC706800FED812 /* MobileDataUsageListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDataUsageListTableViewController.swift; sourceTree = "<group>"; };
+		0A475DBD24EC731600FED812 /* MobileDataHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MobileDataHeaderView.xib; sourceTree = "<group>"; };
+		0A475DBE24EC731600FED812 /* MobileDataTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MobileDataTableViewCell.xib; sourceTree = "<group>"; };
+		0A475DBF24EC731600FED812 /* MobileDataHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobileDataHeaderView.swift; sourceTree = "<group>"; };
+		0A475DC024EC731600FED812 /* MobileDataTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobileDataTableViewCell.swift; sourceTree = "<group>"; };
+		0A475DC624EC73FB00FED812 /* MobileDataListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDataListViewModel.swift; sourceTree = "<group>"; };
 		0A7DF34924EC472D00680E45 /* MobileDataRecorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileDataRecorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A7DF34C24EC472D00680E45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0A7DF35024EC472D00680E45 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0A7DF35324EC472D00680E45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0A7DF35524EC473100680E45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A7DF35824EC473100680E45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +61,14 @@
 		0A7DF36A24EC473100680E45 /* MobileDataRecorderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileDataRecorderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A7DF36E24EC473100680E45 /* MobileDataRecorderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDataRecorderUITests.swift; sourceTree = "<group>"; };
 		0A7DF37024EC473100680E45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13CBA48F7981829BC69A6711 /* Pods_MobileDataRecorderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileDataRecorderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		35D2673CB3F6A93C63CD8E91 /* Pods-MobileDataRecorderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileDataRecorderTests.release.xcconfig"; path = "Target Support Files/Pods-MobileDataRecorderTests/Pods-MobileDataRecorderTests.release.xcconfig"; sourceTree = "<group>"; };
+		37668BDDCA02D91DEE5A71EE /* Pods-MobileDataRecorderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileDataRecorderTests.debug.xcconfig"; path = "Target Support Files/Pods-MobileDataRecorderTests/Pods-MobileDataRecorderTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4798CD27F1481846531B03AA /* Pods-MobileDataRecorder-MobileDataRecorderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileDataRecorder-MobileDataRecorderUITests.release.xcconfig"; path = "Target Support Files/Pods-MobileDataRecorder-MobileDataRecorderUITests/Pods-MobileDataRecorder-MobileDataRecorderUITests.release.xcconfig"; sourceTree = "<group>"; };
+		86DC76F807132050909AA4BA /* Pods-MobileDataRecorder-MobileDataRecorderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileDataRecorder-MobileDataRecorderUITests.debug.xcconfig"; path = "Target Support Files/Pods-MobileDataRecorder-MobileDataRecorderUITests/Pods-MobileDataRecorder-MobileDataRecorderUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		AD2CEFB5C4B8C20695F3C0A7 /* Pods_MobileDataRecorder_MobileDataRecorderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileDataRecorder_MobileDataRecorderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADA19CFEB99F15599EF64655 /* Pods-MobileDataRecorder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileDataRecorder.release.xcconfig"; path = "Target Support Files/Pods-MobileDataRecorder/Pods-MobileDataRecorder.release.xcconfig"; sourceTree = "<group>"; };
+		F8B4EA0DCA3C987E2431E4C2 /* Pods_MobileDataRecorder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileDataRecorder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00FDF2E5744260FB031A5FFC /* Pods_MobileDataRecorder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				691BC3222E086BE35833086C /* Pods_MobileDataRecorderTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +92,85 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9672D509ADAD0D9E4F646238 /* Pods_MobileDataRecorder_MobileDataRecorderUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A475DB424EC6EFD00FED812 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				0A475DBA24EC721300FED812 /* Commonkit */,
+				0A475DB724EC6FC200FED812 /* Storyboard */,
+				0A475DB524EC6F6C00FED812 /* MobileDataRecord */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		0A475DB524EC6F6C00FED812 /* MobileDataRecord */ = {
+			isa = PBXGroup;
+			children = (
+				0A475DC524EC73D800FED812 /* ViewModel */,
+				0A475DBC24EC72EB00FED812 /* Customview */,
+				0A475DB624EC6F8400FED812 /* MobileDataUsageList */,
+			);
+			path = MobileDataRecord;
+			sourceTree = "<group>";
+		};
+		0A475DB624EC6F8400FED812 /* MobileDataUsageList */ = {
+			isa = PBXGroup;
+			children = (
+				0A475DB824EC706800FED812 /* MobileDataUsageListTableViewController.swift */,
+			);
+			path = MobileDataUsageList;
+			sourceTree = "<group>";
+		};
+		0A475DB724EC6FC200FED812 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				0A7DF35724EC473100680E45 /* LaunchScreen.storyboard */,
+				0A7DF35224EC472D00680E45 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		0A475DBA24EC721300FED812 /* Commonkit */ = {
+			isa = PBXGroup;
+			children = (
+				0A475DBB24EC723100FED812 /* ApplicationKit */,
+			);
+			path = Commonkit;
+			sourceTree = "<group>";
+		};
+		0A475DBB24EC723100FED812 /* ApplicationKit */ = {
+			isa = PBXGroup;
+			children = (
+				0A7DF34C24EC472D00680E45 /* AppDelegate.swift */,
+			);
+			path = ApplicationKit;
+			sourceTree = "<group>";
+		};
+		0A475DBC24EC72EB00FED812 /* Customview */ = {
+			isa = PBXGroup;
+			children = (
+				0A475DBF24EC731600FED812 /* MobileDataHeaderView.swift */,
+				0A475DBD24EC731600FED812 /* MobileDataHeaderView.xib */,
+				0A475DC024EC731600FED812 /* MobileDataTableViewCell.swift */,
+				0A475DBE24EC731600FED812 /* MobileDataTableViewCell.xib */,
+			);
+			path = Customview;
+			sourceTree = "<group>";
+		};
+		0A475DC524EC73D800FED812 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0A475DC624EC73FB00FED812 /* MobileDataListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		0A7DF34024EC472D00680E45 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +178,8 @@
 				0A7DF36224EC473100680E45 /* MobileDataRecorderTests */,
 				0A7DF36D24EC473100680E45 /* MobileDataRecorderUITests */,
 				0A7DF34A24EC472D00680E45 /* Products */,
+				456A551A8402431797D79315 /* Pods */,
+				4F70D5ECB78784A6A3F80EA3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,11 +196,8 @@
 		0A7DF34B24EC472D00680E45 /* MobileDataRecorder */ = {
 			isa = PBXGroup;
 			children = (
-				0A7DF34C24EC472D00680E45 /* AppDelegate.swift */,
-				0A7DF35024EC472D00680E45 /* ViewController.swift */,
-				0A7DF35224EC472D00680E45 /* Main.storyboard */,
+				0A475DB424EC6EFD00FED812 /* Modules */,
 				0A7DF35524EC473100680E45 /* Assets.xcassets */,
-				0A7DF35724EC473100680E45 /* LaunchScreen.storyboard */,
 				0A7DF35A24EC473100680E45 /* Info.plist */,
 			);
 			path = MobileDataRecorder;
@@ -125,6 +221,29 @@
 			path = MobileDataRecorderUITests;
 			sourceTree = "<group>";
 		};
+		456A551A8402431797D79315 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0272BED64D9F3BE4A94DC53E /* Pods-MobileDataRecorder.debug.xcconfig */,
+				ADA19CFEB99F15599EF64655 /* Pods-MobileDataRecorder.release.xcconfig */,
+				86DC76F807132050909AA4BA /* Pods-MobileDataRecorder-MobileDataRecorderUITests.debug.xcconfig */,
+				4798CD27F1481846531B03AA /* Pods-MobileDataRecorder-MobileDataRecorderUITests.release.xcconfig */,
+				37668BDDCA02D91DEE5A71EE /* Pods-MobileDataRecorderTests.debug.xcconfig */,
+				35D2673CB3F6A93C63CD8E91 /* Pods-MobileDataRecorderTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4F70D5ECB78784A6A3F80EA3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F8B4EA0DCA3C987E2431E4C2 /* Pods_MobileDataRecorder.framework */,
+				AD2CEFB5C4B8C20695F3C0A7 /* Pods_MobileDataRecorder_MobileDataRecorderUITests.framework */,
+				13CBA48F7981829BC69A6711 /* Pods_MobileDataRecorderTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +251,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0A7DF37324EC473100680E45 /* Build configuration list for PBXNativeTarget "MobileDataRecorder" */;
 			buildPhases = (
+				FCB4497572E68E1B1AFB9DC8 /* [CP] Check Pods Manifest.lock */,
 				0A7DF34524EC472D00680E45 /* Sources */,
 				0A7DF34624EC472D00680E45 /* Frameworks */,
 				0A7DF34724EC472D00680E45 /* Resources */,
+				827A0268267DFD7BCBBF469C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +270,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0A7DF37624EC473100680E45 /* Build configuration list for PBXNativeTarget "MobileDataRecorderTests" */;
 			buildPhases = (
+				44DDB24A8A39B329BBA4D19C /* [CP] Check Pods Manifest.lock */,
 				0A7DF35B24EC473100680E45 /* Sources */,
 				0A7DF35C24EC473100680E45 /* Frameworks */,
 				0A7DF35D24EC473100680E45 /* Resources */,
@@ -167,9 +289,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0A7DF37924EC473100680E45 /* Build configuration list for PBXNativeTarget "MobileDataRecorderUITests" */;
 			buildPhases = (
+				D64D856FBDD64332E3FB9A49 /* [CP] Check Pods Manifest.lock */,
 				0A7DF36624EC473100680E45 /* Sources */,
 				0A7DF36724EC473100680E45 /* Frameworks */,
 				0A7DF36824EC473100680E45 /* Resources */,
+				40CF4DE95B4C5812CC8F85CE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -231,7 +355,9 @@
 			files = (
 				0A7DF35924EC473100680E45 /* LaunchScreen.storyboard in Resources */,
 				0A7DF35624EC473100680E45 /* Assets.xcassets in Resources */,
+				0A475DC224EC731600FED812 /* MobileDataTableViewCell.xib in Resources */,
 				0A7DF35424EC472D00680E45 /* Main.storyboard in Resources */,
+				0A475DC124EC731600FED812 /* MobileDataHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,13 +377,119 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		40CF4DE95B4C5812CC8F85CE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MobileDataRecorder-MobileDataRecorderUITests/Pods-MobileDataRecorder-MobileDataRecorderUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MobileDataRecorder-MobileDataRecorderUITests/Pods-MobileDataRecorder-MobileDataRecorderUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MobileDataRecorder-MobileDataRecorderUITests/Pods-MobileDataRecorder-MobileDataRecorderUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		44DDB24A8A39B329BBA4D19C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MobileDataRecorderTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		827A0268267DFD7BCBBF469C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MobileDataRecorder/Pods-MobileDataRecorder-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MobileDataRecorder/Pods-MobileDataRecorder-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MobileDataRecorder/Pods-MobileDataRecorder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D64D856FBDD64332E3FB9A49 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MobileDataRecorder-MobileDataRecorderUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FCB4497572E68E1B1AFB9DC8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MobileDataRecorder-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0A7DF34524EC472D00680E45 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A7DF35124EC472D00680E45 /* ViewController.swift in Sources */,
 				0A7DF34D24EC472D00680E45 /* AppDelegate.swift in Sources */,
+				0A475DC424EC731600FED812 /* MobileDataTableViewCell.swift in Sources */,
+				0A475DC324EC731600FED812 /* MobileDataHeaderView.swift in Sources */,
+				0A475DB924EC706900FED812 /* MobileDataUsageListTableViewController.swift in Sources */,
+				0A475DC724EC73FB00FED812 /* MobileDataListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,11 +660,13 @@
 		};
 		0A7DF37424EC473100680E45 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0272BED64D9F3BE4A94DC53E /* Pods-MobileDataRecorder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 853M757W8Y;
 				INFOPLIST_FILE = MobileDataRecorder/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -446,11 +680,13 @@
 		};
 		0A7DF37524EC473100680E45 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADA19CFEB99F15599EF64655 /* Pods-MobileDataRecorder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 853M757W8Y;
 				INFOPLIST_FILE = MobileDataRecorder/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -464,6 +700,7 @@
 		};
 		0A7DF37724EC473100680E45 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37668BDDCA02D91DEE5A71EE /* Pods-MobileDataRecorderTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -486,6 +723,7 @@
 		};
 		0A7DF37824EC473100680E45 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35D2673CB3F6A93C63CD8E91 /* Pods-MobileDataRecorderTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +746,7 @@
 		};
 		0A7DF37A24EC473100680E45 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86DC76F807132050909AA4BA /* Pods-MobileDataRecorder-MobileDataRecorderUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -528,6 +767,7 @@
 		};
 		0A7DF37B24EC473100680E45 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4798CD27F1481846531B03AA /* Pods-MobileDataRecorder-MobileDataRecorderUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

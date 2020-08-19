@@ -20,6 +20,12 @@
 		0A7DF35924EC473100680E45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A7DF35724EC473100680E45 /* LaunchScreen.storyboard */; };
 		0A7DF36424EC473100680E45 /* MobileDataRecorderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7DF36324EC473100680E45 /* MobileDataRecorderTests.swift */; };
 		0A7DF36F24EC473100680E45 /* MobileDataRecorderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7DF36E24EC473100680E45 /* MobileDataRecorderUITests.swift */; };
+		0AB5836924ECEF47000747F0 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB5836824ECEF47000747F0 /* Response.swift */; };
+		0AB5836C24ECF255000747F0 /* MobileDataFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB5836B24ECF255000747F0 /* MobileDataFactory.swift */; };
+		0AB5837124ECF307000747F0 /* NetworkManagerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB5836F24ECF307000747F0 /* NetworkManagerService.swift */; };
+		0AB5837224ECF307000747F0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB5837024ECF307000747F0 /* NetworkManager.swift */; };
+		0AB5837524ECF350000747F0 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB5837424ECF350000747F0 /* APIError.swift */; };
+		0AB5837824ECF3AE000747F0 /* MobileDataConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB5837724ECF3AE000747F0 /* MobileDataConstant.swift */; };
 		691BC3222E086BE35833086C /* Pods_MobileDataRecorderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13CBA48F7981829BC69A6711 /* Pods_MobileDataRecorderTests.framework */; };
 		9672D509ADAD0D9E4F646238 /* Pods_MobileDataRecorder_MobileDataRecorderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD2CEFB5C4B8C20695F3C0A7 /* Pods_MobileDataRecorder_MobileDataRecorderUITests.framework */; };
 /* End PBXBuildFile section */
@@ -61,6 +67,12 @@
 		0A7DF36A24EC473100680E45 /* MobileDataRecorderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileDataRecorderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A7DF36E24EC473100680E45 /* MobileDataRecorderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDataRecorderUITests.swift; sourceTree = "<group>"; };
 		0A7DF37024EC473100680E45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AB5836824ECEF47000747F0 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		0AB5836B24ECF255000747F0 /* MobileDataFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobileDataFactory.swift; sourceTree = "<group>"; };
+		0AB5836F24ECF307000747F0 /* NetworkManagerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManagerService.swift; sourceTree = "<group>"; };
+		0AB5837024ECF307000747F0 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		0AB5837424ECF350000747F0 /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		0AB5837724ECF3AE000747F0 /* MobileDataConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobileDataConstant.swift; sourceTree = "<group>"; };
 		13CBA48F7981829BC69A6711 /* Pods_MobileDataRecorderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileDataRecorderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		35D2673CB3F6A93C63CD8E91 /* Pods-MobileDataRecorderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileDataRecorderTests.release.xcconfig"; path = "Target Support Files/Pods-MobileDataRecorderTests/Pods-MobileDataRecorderTests.release.xcconfig"; sourceTree = "<group>"; };
 		37668BDDCA02D91DEE5A71EE /* Pods-MobileDataRecorderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileDataRecorderTests.debug.xcconfig"; path = "Target Support Files/Pods-MobileDataRecorderTests/Pods-MobileDataRecorderTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -102,6 +114,9 @@
 		0A475DB424EC6EFD00FED812 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				0AB5836D24ECF27F000747F0 /* Networking */,
+				0AB5836A24ECF1EF000747F0 /* FactoryMethod */,
+				0AB5836724ECEF2F000747F0 /* Model */,
 				0A475DBA24EC721300FED812 /* Commonkit */,
 				0A475DB724EC6FC200FED812 /* Storyboard */,
 				0A475DB524EC6F6C00FED812 /* MobileDataRecord */,
@@ -139,6 +154,7 @@
 		0A475DBA24EC721300FED812 /* Commonkit */ = {
 			isa = PBXGroup;
 			children = (
+				0AB5837624ECF392000747F0 /* MobileDataConstant */,
 				0A475DBB24EC723100FED812 /* ApplicationKit */,
 			);
 			path = Commonkit;
@@ -219,6 +235,56 @@
 				0A7DF37024EC473100680E45 /* Info.plist */,
 			);
 			path = MobileDataRecorderUITests;
+			sourceTree = "<group>";
+		};
+		0AB5836724ECEF2F000747F0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0AB5836824ECEF47000747F0 /* Response.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0AB5836A24ECF1EF000747F0 /* FactoryMethod */ = {
+			isa = PBXGroup;
+			children = (
+				0AB5836B24ECF255000747F0 /* MobileDataFactory.swift */,
+			);
+			path = FactoryMethod;
+			sourceTree = "<group>";
+		};
+		0AB5836D24ECF27F000747F0 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				0AB5837324ECF31E000747F0 /* ErrorModule */,
+				0AB5836E24ECF2DB000747F0 /* NetworkManager */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		0AB5836E24ECF2DB000747F0 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				0AB5837024ECF307000747F0 /* NetworkManager.swift */,
+				0AB5836F24ECF307000747F0 /* NetworkManagerService.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		0AB5837324ECF31E000747F0 /* ErrorModule */ = {
+			isa = PBXGroup;
+			children = (
+				0AB5837424ECF350000747F0 /* APIError.swift */,
+			);
+			path = ErrorModule;
+			sourceTree = "<group>";
+		};
+		0AB5837624ECF392000747F0 /* MobileDataConstant */ = {
+			isa = PBXGroup;
+			children = (
+				0AB5837724ECF3AE000747F0 /* MobileDataConstant.swift */,
+			);
+			path = MobileDataConstant;
 			sourceTree = "<group>";
 		};
 		456A551A8402431797D79315 /* Pods */ = {
@@ -485,10 +551,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AB5837824ECF3AE000747F0 /* MobileDataConstant.swift in Sources */,
+				0AB5837224ECF307000747F0 /* NetworkManager.swift in Sources */,
 				0A7DF34D24EC472D00680E45 /* AppDelegate.swift in Sources */,
 				0A475DC424EC731600FED812 /* MobileDataTableViewCell.swift in Sources */,
+				0AB5837524ECF350000747F0 /* APIError.swift in Sources */,
 				0A475DC324EC731600FED812 /* MobileDataHeaderView.swift in Sources */,
+				0AB5836C24ECF255000747F0 /* MobileDataFactory.swift in Sources */,
+				0AB5837124ECF307000747F0 /* NetworkManagerService.swift in Sources */,
 				0A475DB924EC706900FED812 /* MobileDataUsageListTableViewController.swift in Sources */,
+				0AB5836924ECEF47000747F0 /* Response.swift in Sources */,
 				0A475DC724EC73FB00FED812 /* MobileDataListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

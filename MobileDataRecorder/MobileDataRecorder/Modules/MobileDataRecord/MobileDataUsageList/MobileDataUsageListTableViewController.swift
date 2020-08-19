@@ -34,15 +34,16 @@ class MobileDataUsageListTableViewController: UITableViewController {
     }
 }
 
+// MARK: - Table view data source
+
 extension MobileDataUsageListTableViewController  {
-    // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return viewModel.fetchNumberOfSection()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return viewModel.fetchNumberOfRows()
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -58,6 +59,7 @@ extension MobileDataUsageListTableViewController  {
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return CGFloat(60.0)
-    }
+          return CGFloat(viewModel.constantString.tableViewCellHeight)
+      }
 }
+

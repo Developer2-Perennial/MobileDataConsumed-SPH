@@ -34,7 +34,24 @@ class MobileDataListViewModel: BaseViewModel {
     }
     
     weak var delegate : MobileDataListDelegate?
+    var consumedDataListInstance = [ConsumedDataInstance]()
+    let constantString = MobileDataConstant()
     
     func viewModelInitialSetup() {
     }
 }
+
+extension MobileDataListViewModel {
+    func fetchNumberOfSection() -> Int {
+        return consumedDataListInstance.isEmpty ? 0 : 1
+    }
+    
+    func fetchNumberOfRows() -> Int {
+        return consumedDataListInstance.count
+    }
+    
+    func fetchConsumedDataForRow(selectedIndex: Int) -> ConsumedDataInstance? {
+        return consumedDataListInstance[selectedIndex]
+    }
+}
+

@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		00FDF2E5744260FB031A5FFC /* Pods_MobileDataRecorder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8B4EA0DCA3C987E2431E4C2 /* Pods_MobileDataRecorder.framework */; };
+		0A256C0E24ED17D20021CB79 /* ConsumedDataStoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A256C0B24ED17D20021CB79 /* ConsumedDataStoreModel.swift */; };
+		0A256C0F24ED17D20021CB79 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A256C0C24ED17D20021CB79 /* DatabaseManager.swift */; };
+		0A256C1024ED17D20021CB79 /* DatabaseManagerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A256C0D24ED17D20021CB79 /* DatabaseManagerService.swift */; };
+		0A256C1324ED1B6E0021CB79 /* UIViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A256C1224ED1B6E0021CB79 /* UIViewcontroller.swift */; };
+		0A256C1524ED1CA90021CB79 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A256C1424ED1CA90021CB79 /* UIView.swift */; };
 		0A475DB924EC706900FED812 /* MobileDataUsageListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A475DB824EC706800FED812 /* MobileDataUsageListTableViewController.swift */; };
 		0A475DC124EC731600FED812 /* MobileDataHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A475DBD24EC731600FED812 /* MobileDataHeaderView.xib */; };
 		0A475DC224EC731600FED812 /* MobileDataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A475DBE24EC731600FED812 /* MobileDataTableViewCell.xib */; };
@@ -49,6 +54,11 @@
 
 /* Begin PBXFileReference section */
 		0272BED64D9F3BE4A94DC53E /* Pods-MobileDataRecorder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileDataRecorder.debug.xcconfig"; path = "Target Support Files/Pods-MobileDataRecorder/Pods-MobileDataRecorder.debug.xcconfig"; sourceTree = "<group>"; };
+		0A256C0B24ED17D20021CB79 /* ConsumedDataStoreModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsumedDataStoreModel.swift; sourceTree = "<group>"; };
+		0A256C0C24ED17D20021CB79 /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		0A256C0D24ED17D20021CB79 /* DatabaseManagerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManagerService.swift; sourceTree = "<group>"; };
+		0A256C1224ED1B6E0021CB79 /* UIViewcontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewcontroller.swift; sourceTree = "<group>"; };
+		0A256C1424ED1CA90021CB79 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		0A475DB824EC706800FED812 /* MobileDataUsageListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDataUsageListTableViewController.swift; sourceTree = "<group>"; };
 		0A475DBD24EC731600FED812 /* MobileDataHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MobileDataHeaderView.xib; sourceTree = "<group>"; };
 		0A475DBE24EC731600FED812 /* MobileDataTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MobileDataTableViewCell.xib; sourceTree = "<group>"; };
@@ -111,9 +121,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A256C0A24ED17A70021CB79 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				0A256C0B24ED17D20021CB79 /* ConsumedDataStoreModel.swift */,
+				0A256C0C24ED17D20021CB79 /* DatabaseManager.swift */,
+				0A256C0D24ED17D20021CB79 /* DatabaseManagerService.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		0A256C1124ED199A0021CB79 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0A256C1224ED1B6E0021CB79 /* UIViewcontroller.swift */,
+				0A256C1424ED1CA90021CB79 /* UIView.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		0A475DB424EC6EFD00FED812 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				0A256C1124ED199A0021CB79 /* Extension */,
+				0A256C0A24ED17A70021CB79 /* Database */,
 				0AB5836D24ECF27F000747F0 /* Networking */,
 				0AB5836A24ECF1EF000747F0 /* FactoryMethod */,
 				0AB5836724ECEF2F000747F0 /* Model */,
@@ -551,7 +582,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A256C1524ED1CA90021CB79 /* UIView.swift in Sources */,
 				0AB5837824ECF3AE000747F0 /* MobileDataConstant.swift in Sources */,
+				0A256C0E24ED17D20021CB79 /* ConsumedDataStoreModel.swift in Sources */,
+				0A256C1024ED17D20021CB79 /* DatabaseManagerService.swift in Sources */,
+				0A256C0F24ED17D20021CB79 /* DatabaseManager.swift in Sources */,
 				0AB5837224ECF307000747F0 /* NetworkManager.swift in Sources */,
 				0A7DF34D24EC472D00680E45 /* AppDelegate.swift in Sources */,
 				0A475DC424EC731600FED812 /* MobileDataTableViewCell.swift in Sources */,
@@ -559,6 +594,7 @@
 				0A475DC324EC731600FED812 /* MobileDataHeaderView.swift in Sources */,
 				0AB5836C24ECF255000747F0 /* MobileDataFactory.swift in Sources */,
 				0AB5837124ECF307000747F0 /* NetworkManagerService.swift in Sources */,
+				0A256C1324ED1B6E0021CB79 /* UIViewcontroller.swift in Sources */,
 				0A475DB924EC706900FED812 /* MobileDataUsageListTableViewController.swift in Sources */,
 				0AB5836924ECEF47000747F0 /* Response.swift in Sources */,
 				0A475DC724EC73FB00FED812 /* MobileDataListViewModel.swift in Sources */,

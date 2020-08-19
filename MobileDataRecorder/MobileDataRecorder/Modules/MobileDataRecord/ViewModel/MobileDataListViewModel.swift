@@ -37,7 +37,90 @@ class MobileDataListViewModel: BaseViewModel {
     var consumedDataListInstance = [ConsumedDataInstance]()
     let constantString = MobileDataConstant()
     
+    var databaseManager: DatabaseManagerService
+    var networkManager: NetworkManagerService
+    
+    init(databaseManager: DatabaseManagerService, networkManager: NetworkManagerService) {
+        self.databaseManager = databaseManager
+        self.networkManager = networkManager
+    }
+    
+    
     func viewModelInitialSetup() {
+        prepareForFetchingMobileDataConsumed()
+    }
+    
+    private func prepareForFetchingMobileDataConsumed() {
+        fetchMobileDataUsageListFromServer(paramDict: createParamDict(limit: 100))
+    }
+    
+    private func createParamDict(limit : Int) -> [String : Any]{
+        let param: [String: Any] = ["resource_id": constantString.resourceID, "limit": limit]
+        return param
+    }
+    
+    func fetchMobileDataUsageListFromServer(paramDict : [String : Any]) {
+        fetchCacheDataFromDatabase()
+        self.networkManager.request(url: constantString.dataStoreSearch, method: .get, parameters: paramDict, headers: [:], uRLEncoding: .default) { (result: Result<MobileDateResponseModel, APIError>) in
+            switch result {
+            case .success(let model):
+                self.bindDataToViewModel(consumedData: model)
+                self.storeDataIntoDatabase(model: model)
+                self.delegate?.successOnLoadDate()
+            case .failure(let error) :
+                if error.internetNotAvailble {
+                    self.delegate?.showErrorOnLoadingDate(errorString: self.constantString.noInternetConnection)
+                } else {
+                    self.delegate?.showErrorOnLoadingDate(errorString: error.localizedDescription)
+                }
+            }
+        }
+    }
+    
+    func bindDataToViewModel(consumedData: MobileDateResponseModel) {
+        var consumedDataDict : [String: [[String: String]]] = [ : ]
+        for consumeRecord in consumedData.result.records {
+            let yearQuarter = consumeRecord.quarter?.components(separatedBy: "-") //2004-Q3
+            if let yearQuarterInstance = yearQuarter, yearQuarterInstance.count > 0 {
+                var quartersData = consumedDataDict[yearQuarterInstance.first ?? ""] ?? [[String: String]]()
+                var quarterDataDict = [String: String]()
+                quarterDataDict["quarter"] = yearQuarterInstance.last
+                quarterDataDict["volumeOfMobileData"] = consumeRecord.volumeOfMobileData
+                quartersData.append(quarterDataDict)
+                consumedDataDict[yearQuarterInstance.first ?? "NA"] = quartersData
+            }
+        }
+        sortYearValue(consumedData: consumedDataDict)
+    }
+    
+    private func storeDataIntoDatabase(model:MobileDateResponseModel) {
+        let resultDataObj = ConsumedDataStoreModel()
+        resultDataObj.model = model
+        AppService.MobileDatabaseManager().clearCacheData { (isResult) in
+            AppService.MobileDatabaseManager().storeDataInDatabase(record: resultDataObj) { (isResult) in
+                print(isResult)
+            }
+        }
+    }
+    
+    private func fetchCacheDataFromDatabase() {
+        let records = AppService.MobileDatabaseManager().fetchDataFromDatabase()
+        if let reoordInstance = records, reoordInstance.count > 0, let modelData = reoordInstance.first?.model {
+            self.bindDataToViewModel(consumedData: modelData)
+            self.delegate?.successOnLoadDate()
+        } else {
+            debugPrint("No record in database")
+        }
+    }
+    
+    private func sortYearValue(consumedData: [String: [[String: String]]]) {
+        consumedDataListInstance.removeAll()
+        for (name, quarter) in consumedData {
+            consumedDataListInstance.append(ConsumedDataInstance(name: name, quarters: quarter))
+        }
+        consumedDataListInstance.sort { (yearValueOne, yearValuetwo) -> Bool in
+            return yearValueOne.yearValue! > yearValuetwo.yearValue!
+        }
     }
 }
 

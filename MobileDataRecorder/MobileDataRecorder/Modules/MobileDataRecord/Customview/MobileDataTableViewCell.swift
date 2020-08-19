@@ -23,5 +23,26 @@ class MobileDataTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        doTableViewCellSetup()
+    }
+    
+    func populateData(record: ConsumedDataInstance?) {
+        if let recordInstance = record {
+            yearValueLabel.text = (recordInstance.yearValue ?? "")
+            dataUsageLabel.text = recordInstance.fetchMobileUsageData()
+            showDetailButton.isHidden = !(recordInstance.fetchDescresedConsumedData().0)
+        }
+    }
+    
+    func doTableViewCellSetup() {
+        cellContentView.setBorderColor(borderColor: UIColor.lightGray.cgColor, borderWidth: 1.0, cornerRadius: 2.0)
+    }
+    
+    // MARK:- IBActions
+    
+    @IBAction func actionOnDetailButtonClicked(_ sender: UIButton?) {
+        if let selectedCellIndex = sender?.tag {
+            mobileDataTableViewCellDelegate?.detailButtonClicked(selectedCellIndex:selectedCellIndex)
+        }
     }
 }

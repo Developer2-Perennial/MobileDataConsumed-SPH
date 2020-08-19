@@ -17,13 +17,21 @@ class MobileDataUsageListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         doInitialSetup()
+        fetchMobileConsumedFromServer()
     }
     
     // MARK: - Custom methods
     
     func doInitialSetup() {
-        self.title = "Mobile Data Usage"
+        viewModel = MobileConsumedDataFactory.createMobileDataViewModel(type:.getMobileConsumedList) as? MobileDataListViewModel
+        self.title = viewModel.constantString.screenTitle
+        viewModel.delegate = self
         registerNibs()
+    }
+    
+    func fetchMobileConsumedFromServer() {
+        loader = self.showLoader(label: viewModel.constantString.processingLablTitle)
+        self.viewModel.viewModelInitialSetup()
     }
     
     //Register Tableview cell here
@@ -49,7 +57,9 @@ extension MobileDataUsageListTableViewController  {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "MobileDataTableViewCell") as? MobileDataTableViewCell
         cell?.showDetailButton.tag = indexPath.row
-        return cell!
+        cell?.mobileDataTableViewCellDelegate = self
+        cell?.populateData(record: viewModel.fetchConsumedDataForRow(selectedIndex: indexPath.row))
+        return cell ?? UITableViewCell()
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -63,3 +73,31 @@ extension MobileDataUsageListTableViewController  {
       }
 }
 
+// MARK: - View model call back methods
+
+extension MobileDataUsageListTableViewController : MobileDataListDelegate {
+    func reloadTableView() {
+        self.tableView.reloadData()
+    }
+    
+    func successOnLoadDate() {
+        DispatchQueue.main.async {
+            self.reloadTableView()
+            self.loader?.hide(animated: true)
+        }
+    }
+    
+    func showErrorOnLoadingDate(errorString: String) {
+        DispatchQueue.main.async {
+            self.showMessage(errorString)
+            self.loader?.hide(animated: true)
+        }
+    }
+}
+
+extension MobileDataUsageListTableViewController : MobileDataTableViewCellDelegate {
+    func detailButtonClicked(selectedCellIndex: NSInteger) {
+        let rec = viewModel.consumedDataListInstance[selectedCellIndex].fetchDescresedConsumedData()
+        self.showAlertViewWithMessage(alertTitle: viewModel.constantString.mobileDataTitle, alertMessage:rec.1, alertBtn: viewModel.constantString.okButtonTitle)
+    }
+}

@@ -12,7 +12,9 @@ import MBProgressHUD
 class MobileDataUsageListTableViewController: UITableViewController {
     
     var loader : MBProgressHUD?
-    var viewModel : MobileDataListViewModel!
+    var viewModel = MobileConsumedDataFactory.createMobileDataViewModel(type:.getMobileConsumedList) as! MobileDataListViewModel
+    
+    // MARK: - View life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +25,6 @@ class MobileDataUsageListTableViewController: UITableViewController {
     // MARK: - Custom methods
     
     func doInitialSetup() {
-        viewModel = MobileConsumedDataFactory.createMobileDataViewModel(type:.getMobileConsumedList) as? MobileDataListViewModel
         self.title = viewModel.constantString.screenTitle
         viewModel.delegate = self
         registerNibs()
@@ -37,8 +38,8 @@ class MobileDataUsageListTableViewController: UITableViewController {
     //Register Tableview cell here
     
     func registerNibs() {
-        self.tableView.register(UINib(nibName: "MobileDataHeaderView", bundle: nil), forHeaderFooterViewReuseIdentifier: "MobileDataHeaderView")
-        self.tableView.register(UINib(nibName: "MobileDataTableViewCell", bundle: nil), forCellReuseIdentifier: "MobileDataTableViewCell")
+        self.tableView.register(UINib(nibName: viewModel.constantString.mobileDataHeaderTitle, bundle: nil), forHeaderFooterViewReuseIdentifier: viewModel.constantString.mobileDataHeaderTitle)
+        self.tableView.register(UINib(nibName: viewModel.constantString.mobileDataTableViewTitle, bundle: nil), forCellReuseIdentifier: viewModel.constantString.mobileDataTableViewTitle)
     }
 }
 
@@ -55,7 +56,7 @@ extension MobileDataUsageListTableViewController  {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCell(withIdentifier: "MobileDataTableViewCell") as? MobileDataTableViewCell
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: viewModel.constantString.mobileDataTableViewTitle) as? MobileDataTableViewCell
         cell?.showDetailButton.tag = indexPath.row
         cell?.mobileDataTableViewCellDelegate = self
         cell?.populateData(record: viewModel.fetchConsumedDataForRow(selectedIndex: indexPath.row))
@@ -63,7 +64,7 @@ extension MobileDataUsageListTableViewController  {
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = self.tableView.dequeueReusableHeaderFooterView(withIdentifier: "MobileDataHeaderView") as? MobileDataHeaderView
+        let headerView = self.tableView.dequeueReusableHeaderFooterView(withIdentifier: viewModel.constantString.mobileDataHeaderTitle) as? MobileDataHeaderView
         headerView?.contentView.backgroundColor = .groupTableViewBackground
         return headerView
     }
@@ -94,6 +95,8 @@ extension MobileDataUsageListTableViewController : MobileDataListDelegate {
         }
     }
 }
+
+// MARK: - Tableviewcell callback method
 
 extension MobileDataUsageListTableViewController : MobileDataTableViewCellDelegate {
     func detailButtonClicked(selectedCellIndex: NSInteger) {

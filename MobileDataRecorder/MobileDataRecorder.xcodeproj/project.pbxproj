@@ -13,6 +13,11 @@
 		0A256C1024ED17D20021CB79 /* DatabaseManagerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A256C0D24ED17D20021CB79 /* DatabaseManagerService.swift */; };
 		0A256C1324ED1B6E0021CB79 /* UIViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A256C1224ED1B6E0021CB79 /* UIViewcontroller.swift */; };
 		0A256C1524ED1CA90021CB79 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A256C1424ED1CA90021CB79 /* UIView.swift */; };
+		0A30A0E824ED263100F3383F /* MockDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A30A0E724ED263100F3383F /* MockDataService.swift */; };
+		0A30A0EB24ED269400F3383F /* ConsumedMobileDataParseErrorModel.json in Resources */ = {isa = PBXBuildFile; fileRef = 0A30A0E924ED269400F3383F /* ConsumedMobileDataParseErrorModel.json */; };
+		0A30A0EC24ED269400F3383F /* ConsumedMobileDataModel.json in Resources */ = {isa = PBXBuildFile; fileRef = 0A30A0EA24ED269400F3383F /* ConsumedMobileDataModel.json */; };
+		0A30A0EE24ED26D100F3383F /* MobileDataDatabaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A30A0ED24ED26D100F3383F /* MobileDataDatabaseTest.swift */; };
+		0A30A0F024ED275E00F3383F /* MobileDataTableViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A30A0EF24ED275E00F3383F /* MobileDataTableViewControllerTest.swift */; };
 		0A475DB924EC706900FED812 /* MobileDataUsageListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A475DB824EC706800FED812 /* MobileDataUsageListTableViewController.swift */; };
 		0A475DC124EC731600FED812 /* MobileDataHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A475DBD24EC731600FED812 /* MobileDataHeaderView.xib */; };
 		0A475DC224EC731600FED812 /* MobileDataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A475DBE24EC731600FED812 /* MobileDataTableViewCell.xib */; };
@@ -31,6 +36,10 @@
 		0AB5837224ECF307000747F0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB5837024ECF307000747F0 /* NetworkManager.swift */; };
 		0AB5837524ECF350000747F0 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB5837424ECF350000747F0 /* APIError.swift */; };
 		0AB5837824ECF3AE000747F0 /* MobileDataConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB5837724ECF3AE000747F0 /* MobileDataConstant.swift */; };
+		0AE4758724ED2DED0095EB45 /* MobileDataTableViewCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE4758524ED2DEC0095EB45 /* MobileDataTableViewCellTest.swift */; };
+		0AE4758824ED2DED0095EB45 /* MobileDataListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE4758624ED2DED0095EB45 /* MobileDataListViewModelTest.swift */; };
+		0AE4758924ED33030095EB45 /* ConsumedMobileDataModel.json in Resources */ = {isa = PBXBuildFile; fileRef = 0A30A0EA24ED269400F3383F /* ConsumedMobileDataModel.json */; };
+		0AE4758A24ED33400095EB45 /* ConsumedMobileDataParseErrorModel.json in Resources */ = {isa = PBXBuildFile; fileRef = 0A30A0E924ED269400F3383F /* ConsumedMobileDataParseErrorModel.json */; };
 		691BC3222E086BE35833086C /* Pods_MobileDataRecorderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13CBA48F7981829BC69A6711 /* Pods_MobileDataRecorderTests.framework */; };
 		9672D509ADAD0D9E4F646238 /* Pods_MobileDataRecorder_MobileDataRecorderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD2CEFB5C4B8C20695F3C0A7 /* Pods_MobileDataRecorder_MobileDataRecorderUITests.framework */; };
 /* End PBXBuildFile section */
@@ -59,6 +68,11 @@
 		0A256C0D24ED17D20021CB79 /* DatabaseManagerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManagerService.swift; sourceTree = "<group>"; };
 		0A256C1224ED1B6E0021CB79 /* UIViewcontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewcontroller.swift; sourceTree = "<group>"; };
 		0A256C1424ED1CA90021CB79 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		0A30A0E724ED263100F3383F /* MockDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockDataService.swift; sourceTree = "<group>"; };
+		0A30A0E924ED269400F3383F /* ConsumedMobileDataParseErrorModel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ConsumedMobileDataParseErrorModel.json; sourceTree = "<group>"; };
+		0A30A0EA24ED269400F3383F /* ConsumedMobileDataModel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ConsumedMobileDataModel.json; sourceTree = "<group>"; };
+		0A30A0ED24ED26D100F3383F /* MobileDataDatabaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDataDatabaseTest.swift; sourceTree = "<group>"; };
+		0A30A0EF24ED275E00F3383F /* MobileDataTableViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDataTableViewControllerTest.swift; sourceTree = "<group>"; };
 		0A475DB824EC706800FED812 /* MobileDataUsageListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDataUsageListTableViewController.swift; sourceTree = "<group>"; };
 		0A475DBD24EC731600FED812 /* MobileDataHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MobileDataHeaderView.xib; sourceTree = "<group>"; };
 		0A475DBE24EC731600FED812 /* MobileDataTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MobileDataTableViewCell.xib; sourceTree = "<group>"; };
@@ -83,6 +97,8 @@
 		0AB5837024ECF307000747F0 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		0AB5837424ECF350000747F0 /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		0AB5837724ECF3AE000747F0 /* MobileDataConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobileDataConstant.swift; sourceTree = "<group>"; };
+		0AE4758524ED2DEC0095EB45 /* MobileDataTableViewCellTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobileDataTableViewCellTest.swift; sourceTree = "<group>"; };
+		0AE4758624ED2DED0095EB45 /* MobileDataListViewModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobileDataListViewModelTest.swift; sourceTree = "<group>"; };
 		13CBA48F7981829BC69A6711 /* Pods_MobileDataRecorderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileDataRecorderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		35D2673CB3F6A93C63CD8E91 /* Pods-MobileDataRecorderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileDataRecorderTests.release.xcconfig"; path = "Target Support Files/Pods-MobileDataRecorderTests/Pods-MobileDataRecorderTests.release.xcconfig"; sourceTree = "<group>"; };
 		37668BDDCA02D91DEE5A71EE /* Pods-MobileDataRecorderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileDataRecorderTests.debug.xcconfig"; path = "Target Support Files/Pods-MobileDataRecorderTests/Pods-MobileDataRecorderTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -138,6 +154,36 @@
 				0A256C1424ED1CA90021CB79 /* UIView.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		0A256C1624ED255C0021CB79 /* MockResource */ = {
+			isa = PBXGroup;
+			children = (
+				0AE4758624ED2DED0095EB45 /* MobileDataListViewModelTest.swift */,
+				0AE4758524ED2DEC0095EB45 /* MobileDataTableViewCellTest.swift */,
+				0A256C1824ED25AC0021CB79 /* MockManager */,
+				0A256C1724ED258D0021CB79 /* MockDataModel */,
+				0A30A0ED24ED26D100F3383F /* MobileDataDatabaseTest.swift */,
+				0A30A0EF24ED275E00F3383F /* MobileDataTableViewControllerTest.swift */,
+			);
+			path = MockResource;
+			sourceTree = "<group>";
+		};
+		0A256C1724ED258D0021CB79 /* MockDataModel */ = {
+			isa = PBXGroup;
+			children = (
+				0A30A0EA24ED269400F3383F /* ConsumedMobileDataModel.json */,
+				0A30A0E924ED269400F3383F /* ConsumedMobileDataParseErrorModel.json */,
+			);
+			path = MockDataModel;
+			sourceTree = "<group>";
+		};
+		0A256C1824ED25AC0021CB79 /* MockManager */ = {
+			isa = PBXGroup;
+			children = (
+				0A30A0E724ED263100F3383F /* MockDataService.swift */,
+			);
+			path = MockManager;
 			sourceTree = "<group>";
 		};
 		0A475DB424EC6EFD00FED812 /* Modules */ = {
@@ -253,6 +299,7 @@
 		0A7DF36224EC473100680E45 /* MobileDataRecorderTests */ = {
 			isa = PBXGroup;
 			children = (
+				0A256C1624ED255C0021CB79 /* MockResource */,
 				0A7DF36324EC473100680E45 /* MobileDataRecorderTests.swift */,
 				0A7DF36524EC473100680E45 /* Info.plist */,
 			);
@@ -451,9 +498,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A7DF35924EC473100680E45 /* LaunchScreen.storyboard in Resources */,
+				0AE4758924ED33030095EB45 /* ConsumedMobileDataModel.json in Resources */,
 				0A7DF35624EC473100680E45 /* Assets.xcassets in Resources */,
 				0A475DC224EC731600FED812 /* MobileDataTableViewCell.xib in Resources */,
 				0A7DF35424EC472D00680E45 /* Main.storyboard in Resources */,
+				0AE4758A24ED33400095EB45 /* ConsumedMobileDataParseErrorModel.json in Resources */,
 				0A475DC124EC731600FED812 /* MobileDataHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -462,6 +511,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A30A0EB24ED269400F3383F /* ConsumedMobileDataParseErrorModel.json in Resources */,
+				0A30A0EC24ED269400F3383F /* ConsumedMobileDataModel.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -606,6 +657,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A7DF36424EC473100680E45 /* MobileDataRecorderTests.swift in Sources */,
+				0A30A0EE24ED26D100F3383F /* MobileDataDatabaseTest.swift in Sources */,
+				0AE4758824ED2DED0095EB45 /* MobileDataListViewModelTest.swift in Sources */,
+				0A30A0E824ED263100F3383F /* MockDataService.swift in Sources */,
+				0A30A0F024ED275E00F3383F /* MobileDataTableViewControllerTest.swift in Sources */,
+				0AE4758724ED2DED0095EB45 /* MobileDataTableViewCellTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
